@@ -363,7 +363,8 @@ describe("endpoint()", () => {
       method: "GET",
       url: "/repos/:owner/:repo/issues/:number",
       headers: {
-        accept: "application/vnd.foo-preview,application/vnd.bar-preview"
+        accept:
+          "application/octet-stream,application/vnd.foo-preview,application/vnd.bar-preview"
       },
       mediaType: {
         format: "raw",
@@ -379,7 +380,7 @@ describe("endpoint()", () => {
       url: "https://api.github.com/repos/octokit/endpoint.js/issues/123",
       headers: {
         accept:
-          "application/vnd.github.foo-preview.raw,application/vnd.github.bar-preview.raw,application/vnd.github.symmetra-preview.raw",
+          "application/octet-stream,application/vnd.github.foo-preview.raw,application/vnd.github.bar-preview.raw,application/vnd.github.symmetra-preview.raw",
         "user-agent": userAgent
       }
     });
